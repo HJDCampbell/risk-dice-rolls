@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "risk-dice-rolls"
+version = "0.1.0"
+description = "Playing around with Risk dice roll questions"
+requires-python = ">=3.14"
+dependencies = [
+    "jupyterlab>=4.0.0",
+    "nbstripout"
+]
+
+[tool.nbstripout]
+status = true
+
+[tool.ruff]
+# A fast formatter plus linter
+extend-include = ["*.ipynb"]  # Tells Ruff to look at notebooks
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
